@@ -6,12 +6,17 @@ import { Feather } from '@expo/vector-icons'
 import mapMarker from '../images/map-marker.png'
 
 export default function OrphanagesMap() {
-    const navigation = useNavigation()
-    function navigateToOrphanageDetails(){
-        navigation.navigate('OrphanageDetails')
-    }
+  const navigation = useNavigation()
 
-    return (
+  function navigateToOrphanageDetails() {
+    navigation.navigate('OrphanageDetails')
+  }
+
+  function navigateToCreateOrphanage() {
+    navigation.navigate('SetPosition')
+  }
+
+  return (
     <View style={styles.container}>
       <MapView
         provider={PROVIDER_GOOGLE}
@@ -41,12 +46,12 @@ export default function OrphanagesMap() {
       <View style={styles.footer}>
         <Text style={styles.footerText}>2 Orfanatos encontrados</Text>
 
-        <TouchableOpacity style={styles.createOrphanageButton}>
+        <TouchableOpacity style={styles.createOrphanageButton} onPress={navigateToCreateOrphanage} >
           <Feather name='plus' size={20} color='#fff' />
         </TouchableOpacity>
       </View>
     </View>
-    )
+  )
 }
 
 const styles = StyleSheet.create({
