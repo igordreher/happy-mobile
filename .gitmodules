@@ -2,4 +2,4 @@
 	path = backend
 	url = https://github.com/igordreher/happy-backend
 	branch = master
-	update = rebase
+	update = merge
