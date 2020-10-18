@@ -23,7 +23,6 @@ export default function OrphanagesMap() {
     }).catch(error => { console.error(error) })
   }, [])
 
-  console.log(orphanages)
   function navigateToOrphanageDetails(id: number) {
     navigation.navigate('OrphanageDetails', { id })
   }
