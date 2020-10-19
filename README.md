@@ -14,3 +14,24 @@ Esta é a versão mobile do aplicativo.
 * [Expo](https://expo.io/)
 * [Typescript](https://www.typescriptlang.org/)
 
+## Instalação
+
+Primeiramente, clone o repositório:
+```
+git clone https://github.com/igordreher/happy-mobile --recursive
+cd happy-mobile
+```
+Instalar dependências:
+```
+npm install
+cd backend && npm install
+```
+Atualize 'localhost.ts' para o IP local da sua máquina (informado pelo `expo start`)  
+
+Em terminais separados, na raiz do projeto:
+```
+expo start
+cd backend && npm run dev
+```
+
+Agora basta abrir o aplicativo 'expo' no celular e ler o código QR.
