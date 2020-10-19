@@ -1,7 +1,8 @@
 import axios from 'axios'
+import localHost from '../../localhost'
 
 const api = axios.create({
-    baseURL: 'http://192.168.0.9:3333'
+    baseURL: `http://${localHost}:3333`
 })
 
 export default api
